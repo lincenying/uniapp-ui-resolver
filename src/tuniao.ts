@@ -11,9 +11,9 @@ export function TuNiaoResolver(): ComponentResolver {
                 let file = words[1]
                 if (words[2]) {
                     if (words[2] === 'group' || words[2] === 'item')
-                        dir = `${words[1]}-${words[2]}`
-                    else
                         dir = words[1]
+                    else
+                        dir = `${words[1]}-${words[2]}`
 
                     file = `${words[1]}-${words[2]}`
                 }
