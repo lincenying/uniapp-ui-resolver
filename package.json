@@ -37,6 +37,7 @@
     "dev": "nr build --watch",
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "npm run build",
+    "postpublish": "open https://npmmirror.com/sync/@lincy/uniapp-ui-resolver",
     "release": "bumpp --commit --push --tag && npm publish --access public",
     "start": "esno src/index.ts",
     "typecheck": "tsc --noEmit"
