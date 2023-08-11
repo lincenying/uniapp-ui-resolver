@@ -7,8 +7,16 @@ export function TuNiaoResolver(): ComponentResolver {
         resolve: (name: string) => {
             if (name.match(/^(Tn[A-Z]|tn-[a-z])/)) {
                 const words = splitWords(name).map(item => item.toLowerCase())
-                const dir = words[1]
-                const file = words[2] ? `${words[1]}-${words[2]}` : words[1]
+                let dir = words[1]
+                let file = words[1]
+                if (words[2]) {
+                    if (words[2] === 'group' || words[2] === 'item')
+                        dir = `${words[1]}-${words[2]}`
+                    else
+                        dir = words[1]
+
+                    file = `${words[1]}-${words[2]}`
+                }
                 const component = `@tuniao/tnui-vue3-uniapp/components/${dir}/src/${file}.vue`
 
                 return {
