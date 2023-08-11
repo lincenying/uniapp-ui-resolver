@@ -1,7 +1,7 @@
 {
   "name": "@lincy/uniapp-ui-resolver",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "packageManager": "pnpm@8.4.0",
   "description": "uniapp ui resolver",
   "author": "lincenying <lincenying@gmail.com>",
