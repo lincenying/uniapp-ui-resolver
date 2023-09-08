@@ -1,8 +1,11 @@
 # @lincy/uniapp-ui-resolver
 
 uniapp ui组件库 按需自动导入
+
 目前支持:
+
 TuniaoUI [https://vue3.tuniaokj.com/zh-CN/guide/intro.html]
+
 Wot Design Uni [https://wot-design-uni.cn/guide/introduction.html]
 
 Usage
