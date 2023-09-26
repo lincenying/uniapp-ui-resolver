@@ -50,6 +50,9 @@ devDependencies:
   rollup-plugin-esbuild:
     specifier: ^5.0.0
     version: 5.0.0(rollup@3.26.0)
+  simple-open-url:
+    specifier: ^3.0.1
+    version: 3.0.1
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
@@ -3229,6 +3232,11 @@ packages:
       call-bind: 1.0.2
       get-intrinsic: 1.2.1
       object-inspect: 1.12.3
+    dev: true
+
+  /simple-open-url@3.0.1:
+    resolution: {integrity: sha512-JDp3wXr1Ibm3JP7jrm0t2CuKwox2wl51ArEm1DlkEbiLwzGz5jJHxcR96pKZRnVBNLbZDynNInGMANdK+q15zA==}
+    hasBin: true
     dev: true
 
   /sisteransi@1.0.5:

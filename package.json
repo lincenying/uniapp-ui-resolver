@@ -37,7 +37,7 @@
     "dev": "nr build --watch",
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "npm run build",
-    "postpublish": "open https://npmmirror.com/package/@lincy/uniapp-ui-resolver",
+    "postpublish": "simple-open-url https://npmmirror.com/package/@lincy/uniapp-ui-resolver",
     "release": "bumpp --commit --push --tag && npm publish --access public",
     "start": "esno src/index.ts",
     "typecheck": "tsc --noEmit"
@@ -58,6 +58,7 @@
     "rollup": "^3.26.0",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",
+    "simple-open-url": "^3.0.1",
     "typescript": "^5.1.6",
     "vite": "^4.3.9"
   },
