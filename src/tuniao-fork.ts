@@ -1,0 +1,30 @@
+import type { ComponentResolver } from './types'
+import { splitWords } from './utils'
+
+export function TuNiaoForkResolver(): ComponentResolver {
+    return {
+        type: 'component',
+        resolve: (name: string) => {
+            if (name.match(/^(Tn[A-Z]|tn-[a-z])/)) {
+                const words = splitWords(name).map(item => item.toLowerCase())
+                let dir = words[1]
+                let file = words[1]
+                if (words[2]) {
+                    if (words[2] === 'group' || words[2] === 'item')
+                        dir = words[1]
+                    else
+                        dir = `${words[1]}-${words[2]}`
+
+                    file = `${words[1]}-${words[2]}`
+                }
+                const component = `@lincy/tnui-vue3-uniapp/components/${dir}/src/${file}.vue`
+
+                return {
+                    name,
+                    from: component,
+                    sideEffects: '',
+                }
+            }
+        },
+    }
+}
